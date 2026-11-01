@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Lady — Gabinet Kosmetologii w Radzyminie</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Wstępny projekt strony dla gabinetu Beauty Lady w Radzyminie (nieoficjalna propozycja).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="preview-banner">Wstępny projekt · nieoficjalna propozycja strony dla Beauty Lady · dane z publicznego profilu Booksy, zdjęcia zastąpione miejscami do uzupełnienia</div>
+
+    <!-- Background Canvas for Animated Floating Lines -->
+    <canvas id="lines-canvas"></canvas>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar__container">
+            <span><i class="fa-solid fa-star"></i> Ocena 4,9 (326 opinii) na Booksy — Radzymin, ul. Lecha Falandysza 11/186</span>
+            <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener">Rezerwacja Online Booksy</a>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="brand">
+                BEAUTY LADY
+                <span class="brand__sub">GABINET KOSMETOLOGII</span>
+            </a>
+
+            <nav class="nav" id="main-nav">
+                <a href="#services" class="nav__link">Usługi</a>
+                <a href="#calculator" class="nav__link">Pakiety & Vouchery</a>
+                <a href="#portfolio" class="nav__link">Galeria</a>
+                <a href="#about" class="nav__link">O nas</a>
+                <a href="#faq" class="nav__link">FAQ</a>
+                <a href="#pricing" class="nav__link">Cennik</a>
+                <a href="#contact" class="nav__link">Kontakt</a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener" class="btn btn--primary desktop-btn">UMÓW WIZYTĘ</a>
+                <button class="burger" id="burger-btn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero__grid">
+            <div class="hero__content">
+                <span class="badge">mgr kosmetologii Agata Skiwska</span>
+                <h1 class="hero__title">Piękno, które <br><span class="text-gradient">wymaga oprawy.</span></h1>
+                <p class="hero__desc">Depilacja laserowa, kosmetologia twarzy i ciała oraz strefa beauty w Radzyminie. Od ponad 20 lat dbamy o wygląd i dobre samopoczucie naszych klientek.</p>
+                <div class="hero__buttons">
+                    <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener" class="btn btn--primary btn--large">ZAREZERWUJ TERMIN</a>
+                    <a href="#services" class="btn btn--outline btn--large">POZNAJ USŁUGI</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="blob-placeholder">
+                    <div class="blob-placeholder__text">
+                        <span>Beauty Lady</span>
+                        <p>Gabinet kosmetologii</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services bg-gradient-1" id="services">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="subtitle">CO OFERUJEMY</span>
+                <h2 class="title">Zakres Naszych Usług</h2>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__number">01</div>
+                    <h3>Depilacja Laserowa</h3>
+                    <p>Depilacja laserowa twarzy i ciała: pojedyncze zabiegi oraz pakiety po 6 i 8 zabiegów.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">02</div>
+                    <h3>Kosmetologia Twarzy</h3>
+                    <p>Geneo, Retix-C, zabieg z witaminą C, mezoterapia mikroigłowa Neopen, Cosmo S-Peel oraz radiofrekwencja mikroigłowa RF Matrix.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">03</div>
+                    <h3>Modelowanie Ciała</h3>
+                    <p>Endomasaż (masaż próżniowy) w pakietach po 5 i 10 zabiegów, masaż ciała oraz oczyszczanie i mikrodermabrazja pleców.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">04</div>
+                    <h3>Strefa Beauty</h3>
+                    <p>Manicure i pedicure, stylizacja rzęs i brwi, makijaż, makijaż permanentny, depilacja woskiem i przekłuwanie uszu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator / Voucher Builder Section -->
+    <section class="calculator-section bg-gradient-2" id="calculator">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="subtitle">INTERAKTYWNY DOBÓR</span>
+                <h2 class="title">Kalkulator Pakietów i Vouchery</h2>
+                <p style="color: var(--c-text-muted); margin-top: 8px;">Sprawdź ceny wybranych pakietów i zabiegów oraz możliwość zakupu vouchera prezentowego.</p>
+            </div>
+
+            <div class="calculator-box">
+                <div class="calc-step">
+                    <label>1. Wybierz kategorię zabiegu:</label>
+                    <select id="calc-category" class="calc-select">
+                        <option value="laser">Depilacja laserowa</option>
+                        <option value="face">Kosmetologia twarzy</option>
+                        <option value="body">Endomasaż</option>
+                        <option value="voucher">Voucher prezentowy</option>
+                    </select>
+                </div>
+
+                <div class="calc-step" id="calc-suboption-wrapper">
+                    <label>2. Wybierz wariant:</label>
+                    <select id="calc-variant" class="calc-select">
+                        <option value="1440">Bikini głębokie, pakiet 6 zabiegów (1 440 zł)</option>
+                    </select>
+                </div>
+
+                <div class="calc-result">
+                    <div class="calc-result-text">
+                        <span>Cena według profilu Booksy:</span>
+                        <h3 id="calc-price">1 440 zł</h3>
+                    </div>
+                    <button class="btn btn--primary" id="open-drawer-btn">SPRAWDŹ FORMULARZ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio bg-gradient-3" id="portfolio">
+        <div class="container">
+            <div class="section-heading">
+                <span class="subtitle">GALERIA</span>
+                <h2 class="title">Realizacje</h2>
+                <p style="color: var(--c-text-muted); margin-top: 8px;">Tu pojawią się zdjęcia prac gabinetu, gdy projekt zostanie zaakceptowany.</p>
+            </div>
+            
+            <div class="portfolio__grid">
+                <div class="photo-frame photo-frame--static">
+                    <span>Rzęsy i brwi</span>
+                </div>
+                <div class="photo-frame photo-frame--static">
+                    <span>Paznokcie</span>
+                </div>
+                <div class="photo-frame photo-frame--static">
+                    <span>Zabiegi na twarz</span>
+                </div>
+                <div class="photo-frame photo-frame--static">
+                    <span>Depilacja laserowa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about bg-gradient-1" id="about">
+        <div class="container about__grid">
+            <div class="about__visual">
+                <div class="photo-frame photo-frame--portrait">
+                    <span>Tu pojawi się<br>zdjęcie</span>
+                </div>
+            </div>
+            <div class="about__content">
+                <span class="subtitle">ZESPÓŁ</span>
+                <h2 class="title">Agata Skiwska</h2>
+                <p class="description">Mgr kosmetologii. Od ponad 20 lat gabinet dba o wygląd i dobre samopoczucie klientek, oferując pielęgnację twarzy, ciała, dłoni i stóp.</p>
+                <p class="description">Nowe klientki zapraszamy na bezpłatną konsultację kosmetologiczną. Gabinet stosuje zasady bezpieczeństwa opisane na profilu Booksy, m.in. dezynfekcję stanowiska po każdej wizycie.</p>
+                <div class="about-meta">
+                    <span><strong>Adres:</strong> ul. Lecha Falandysza 11 lok. 186, 05-250 Radzymin</span>
+                    <span><strong>Tel:</strong> +48 602 864 162</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Accordion) -->
+    <section class="faq-section bg-gradient-2" id="faq">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="subtitle">ZASADY</span>
+                <h2 class="title">Najczęstsze pytania</h2>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Jak umówić wizytę?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Możesz zarezerwować termin w Booksy, zadzwonić pod numer +48 602 864 162 lub umówić się osobiście w gabinecie. Wizyty odbywają się tylko po wcześniejszej rezerwacji.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy wymagany jest zadatek?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Przedpłata w Booksy jest jednocześnie zadatkiem za usługę. Jest bezzwrotna, jeśli wizyta nie zostanie odwołana co najmniej 2 dni przed terminem.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy nowa klientka musi odbyć konsultację?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dla nowych klientek konsultacja jest obowiązkowa. Konsultacja kosmetologa jest bezpłatna i trwa 20 minut.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Jak mogę zapłacić?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>W gabinecie można zapłacić gotówką lub BLIK-iem.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy można kupić voucher prezentowy?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tak. Voucher jest imienny, wystawiany na wybraną usługę lub kwotę i ważny rok od zakupu. Całą kwotę można wykorzystać na kilka mniejszych zabiegów.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Co jeśli się spóźnię lub mam urodziny?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Spóźnienie powyżej 10 minut może skutkować odmową lub skróceniem usługi. W dniu urodzin klientki gabinet oferuje dowolny zabieg z rabatem 30% (po okazaniu dokumentu).</p>
+                    </div>
+                </div>
+                <p class="source-note">Zasady według regulaminu gabinetu na Booksy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing bg-gradient-3" id="pricing">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="subtitle">CENNIK</span>
+                <h2 class="title">Wybrane ceny</h2>
+            </div>
+
+            <div class="pricing__list">
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Zabieg Geneo (twarz)</h4>
+                        <span>Odmładzanie, odżywienie i rozjaśnienie skóry, od 1 godz.</span>
+                    </div>
+                    <div class="price-row__amount">320 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Retix-C (retinol + witamina C)</h4>
+                        <span>Intensywne złuszczanie i rewitalizacja, 45 min</span>
+                    </div>
+                    <div class="price-row__amount">380 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Endomasaż, pakiet 10 zabiegów</h4>
+                        <span>Kostium gratis, pakiet ważny pół roku</span>
+                    </div>
+                    <div class="price-row__amount">2 200 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Depilacja laserowa: bikini głębokie, pakiet 6</h4>
+                        <span>45 min na zabieg</span>
+                    </div>
+                    <div class="price-row__amount">1 440 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Rzęsy 1:1, pierwsza aplikacja</h4>
+                        <span>Około 2 godz.</span>
+                    </div>
+                    <div class="price-row__amount">240 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Manicure hybrydowy</h4>
+                        <span>Około 1 godz. 30 min</span>
+                    </div>
+                    <div class="price-row__amount">160 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Henna brwi + rzęsy + regulacja brwi</h4>
+                        <span>Około 30 min</span>
+                    </div>
+                    <div class="price-row__amount">90 zł</div>
+                </div>
+                <div class="price-row">
+                    <div class="price-row__info">
+                        <h4>Makijaż wieczorowy</h4>
+                        <span>Około 1 godz.</span>
+                    </div>
+                    <div class="price-row__amount">220 zł</div>
+                </div>
+            </div>
+            <p class="source-note text-center">Ceny i czas zabiegów według profilu Beauty Lady na Booksy (stan na 01.11.2026). Pełna lista usług jest dostępna w rezerwacji online.</p>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener" class="btn btn--primary">PEŁNY CENNIK NA BOOKSY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews summary -->
+    <section class="testimonials-section bg-gradient-1">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="subtitle">OPINIE KLIENTEK</span>
+                <h2 class="title">Ocena na Booksy</h2>
+                <p class="rating-summary">★ 4,9 / 5,0 · 326 opinii · 316 z nich to 5 gwiazdek</p>
+                <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin#business-reviews" target="_blank" rel="noopener" class="btn btn--outline">ZOBACZ OPINIE NA BOOKSY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Custom Dark Google Map Section -->
+    <section class="contact-section" id="contact">
+        <div class="container contact__container">
+            <div class="contact__info">
+                <span class="subtitle">ZAPRASZAMY</span>
+                <h2 class="title">Odwiedź Nasz Gabinet</h2>
+                
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Adres Salonu:</strong>
+                            <span>ul. Lecha Falandysza 11 lok. 186<br>05-250 Radzymin</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Telefon kontaktowy:</strong>
+                            <a href="tel:+48602864162">+48 602 864 162</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Godziny otwarcia:</strong>
+                            <span>Poniedziałek – Piątek: 08:00 – 21:00<br>Sobota: 09:00 – 14:00<br><small>Godziny według regulaminu na Booksy, mogą ulec zmianie.</small></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener" class="btn btn--primary">
+                    ZAREZERWUJ WIZYTĘ W BOOKSY
+                </a>
+            </div>
+
+            <div class="contact__map-wrapper">
+                <!-- Google Map -->
+                <iframe title="Mapa dojazdu" src="https://www.google.com/maps?q=Lecha+Falandysza+11,+05-250+Radzymin&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <h3 class="footer__brand">Beauty Lady</h3>
+                <p>Gabinet Kosmetologii</p>
+                <p>ul. Lecha Falandysza 11 lok. 186, 05-250 Radzymin</p>
+            </div>
+            <div class="footer__links">
+                <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener">Booksy</a>
+                <a href="https://www.instagram.com/beauty_lady_kosmetologia/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/share/15J2McRfVY/" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>Wstępny projekt strony, wykonany przez Yaroslava. Nieoficjalna propozycja dla Beauty Lady.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons (FAB) for Mobile -->
+    <div class="fab-container">
+        <a href="tel:+48602864162" class="fab-btn fab-phone" aria-label="Zadzwoń">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://booksy.com/pl-pl/104980_beauty-lady-gabinet-kosmetologii_salon-kosmetyczny_4289_radzymin" target="_blank" rel="noopener" class="fab-btn fab-booksy" aria-label="Booksy">
+            <i class="fa-solid fa-calendar-check"></i>
+        </a>
+    </div>
+
+    <!-- Sliding Drawer Modal (For Calculator / Inquiry Form) -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="drawer" id="drawer">
+        <button class="drawer-close" id="drawer-close">&times;</button>
+        <div class="drawer-content">
+            <h3>Zamówienie pakietu / vouchera</h3>
+            <p>Podgląd formularza. W gotowej wersji zapytanie trafi do gabinetu, na razie dane nie są nigdzie wysyłane.</p>
+            
+            <form id="inquiry-form" class="inquiry-form">
+                <!-- Honeypot anti-spam field hidden from users -->
+                <input type="text" name="website_trap" class="honeypot" tabindex="-1" autocomplete="off">
+                
+                <div class="form-group">
+                    <label>Twoje Imię:</label>
+                    <input type="text" id="form-name" required placeholder="np. Anna Nowak">
+                    <span class="error-msg" id="error-name">To pole jest wymagane</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>Numer Telefonu:</label>
+                    <input type="tel" id="form-phone" required placeholder="np. +48 500 600 700">
+                    <span class="error-msg" id="error-phone">Podaj poprawny numer telefonu</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Wybrana usługa / kwota:</label>
+                    <input type="text" id="form-summary" readonly value="Bikini głębokie, pakiet 6 zabiegów (1 440 zł)">
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 10px;">WYŚLIJ ZAPYTANIE</button>
+                <div class="success-msg" id="success-msg" style="display:none; color: var(--c-primary); margin-top: 15px; font-weight: 600; text-align: center;">To wstępny projekt, więc formularz nie wysyła danych. Zadzwoń pod +48 602 864 162 lub zarezerwuj termin w Booksy.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Portfolio Photos -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Realizacja Beauty Lady">
+    </div>
+
+    <!-- FontAwesome Icons & Script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="script.js"></script>
+</body>
+</html>
